@@ -1,23 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import React from "react";
+import { AuthenticatedTemplate, UnauthenticatedTemplate } from "@azure/msal-react";
+import { SignInButton } from './components/SignInButton';
+import { SignOutButton } from './components/SignOutButton';
+import Header from './components/Header';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <AuthenticatedTemplate>
+        <Header><SignOutButton /></Header>
+        <div className='uploader'>
+          <div className='row'>
+          <div className='col-md-6'>
+              <label for="formFileLg" class="form-label">Upload the Certificate</label>
+              <input class="form-control form-control-lg" id="formFileLg" type="file" />
+            </div>
+          </div>
+        </div>
+        
+      
+      </AuthenticatedTemplate>
+      <UnauthenticatedTemplate>
+        <div>
+          <div className='welcomepart'>
+            <div id='welcome'>Welcome to CertiVerify</div>
+            <div id='welcomedesc'>A Persistent way of verifying certifications</div>
+          </div>
+          <div className='ssopart'> 
+            <SignInButton/>
+          </div>
+        </div>
+      </UnauthenticatedTemplate>
     </div>
   );
 }
