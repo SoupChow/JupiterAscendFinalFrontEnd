@@ -4,6 +4,7 @@ import { AuthenticatedTemplate, UnauthenticatedTemplate } from "@azure/msal-reac
 import { SignInButton } from './components/SignInButton';
 import { SignOutButton } from './components/SignOutButton';
 import Header from './components/Header';
+import FileUpload from './components/FileUpload';
 
 function App() {
   return (
@@ -13,13 +14,10 @@ function App() {
         <div className='uploader'>
           <div className='row'>
           <div className='col-md-6'>
-              <label for="formFileLg" class="form-label">Upload the Certificate</label>
-              <input class="form-control form-control-lg" id="formFileLg" type="file" />
+              <FileUpload/>
             </div>
           </div>
         </div>
-        
-      
       </AuthenticatedTemplate>
       <UnauthenticatedTemplate>
         <div>

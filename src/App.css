@@ -35,7 +35,15 @@
   height: 70px;
   width: 266px;
   margin-top: 5%;
+}
 
+#msbutton:hover{
+  height: 70px;
+  width: 266px;
+  margin-top: 5%;
+  box-shadow: -17px 11px 30px -8px rgba(0,0,0,0.3);
+  -webkit-box-shadow: -17px 11px 30px -8px rgba(0,0,0,0.3);
+  -moz-box-shadow: -17px 11px 30px -8px rgba(0,0,0,0.3);
 }
 
 

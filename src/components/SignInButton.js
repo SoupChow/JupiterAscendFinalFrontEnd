@@ -16,8 +16,8 @@ export const SignInButton = () => {
     const { instance } = useMsal();
 
     return (
-        <div>
+        <div >
         <input type="image" id="msbutton" src={image} onClick={() => handleLogin(instance)}/>
-            </div>
+        </div>
     );
 }
